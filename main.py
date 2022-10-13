@@ -128,7 +128,7 @@ while True:
 			print('')
 			print('Now, we have entered the sliding stage.')
 			print('In this stage, you need to choose a node of yours that is connected to the 0 in the grid.')
-			print('The center is conected to every other node and the peripheral nodes are connected to their orthogonal neighbors.')
+			print('The center is connected to every other node and the peripheral nodes are connected to their orthogonal neighbors.')
 			print('If a valid node is not chosen, the turn will be skipped.')
 			print('')
 			printBoard()
