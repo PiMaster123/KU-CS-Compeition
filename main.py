@@ -1,13 +1,17 @@
+# This is the board the game is played on
 boardMatrix = [
 	[0, 0, 0],
 	[0, 0, 0],
 	[0, 0, 0]
 ]
 
+
+
+print('A3 |  B3  | C3', '___|______|_____', 'A2 |  B2  | C2', '___|______|_____', 'A1 |  B1  | C1', '   |      |', '  ', sep='\n') # Draw notation for convenience
 win = 0 # Lets win message only happen once
 stage = 0 # Dictates when the game is in Tic-Tac-Toe stageof game or sliding stage of the game
 
-player = 1
+player = 1 # Says whose turn it is
 
 # For reference in code
 notationMapper = {
@@ -24,6 +28,7 @@ notationMapper = {
 		'C3' : boardMatrix[0][2]		
 	}
 
+# Draw the board 
 def printBoard():
 	print(boardMatrix[0])
 	print(boardMatrix[1])
@@ -34,7 +39,7 @@ def printBoard():
 
 
 
-
+# "Main" game loop
 while True:
 
 	#Dictionary for notation
@@ -52,6 +57,7 @@ while True:
 		'C3' : boardMatrix[0][2]		
 	}
 
+	# Start of the game, specifically stage 0
 	if stage == 0:
 		#Takes move input and skips turn if there isn't valid input
 		try: 
@@ -111,7 +117,9 @@ while True:
 	
 		if win != 0:
 			break
-	
+
+
+		# Lets game proceed to stage 1
 		if sum(x.count(0) for x in boardMatrix) == 1:
 			stage = 1
 			print("its slidin time")
@@ -126,13 +134,13 @@ while True:
 		player*=-1
 
 
-
 	
 	if stage == 1:
 		
 
 		slideMove = input('What piece do you want to slide Player ' + str(player) + ". ")
 
+		# Checks if slideMove is valid; there is probably a better way to do this.
 		if player == notationMapper[slideMove]:
 			if slideMove == 'A1':
 				if boardMatrix[1][0] == 0:
@@ -350,6 +358,3 @@ while True:
 
 
  
-print('')
-print('')
-print('The game is over; why are you still looking here')
