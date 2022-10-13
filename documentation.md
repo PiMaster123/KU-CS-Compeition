@@ -12,7 +12,7 @@ We have made a variant a Tic-Tac-Toe called Achi using the Python console.
  - Stage 2: This is the sliding stage. Players take turns sliding an integer of theirs along a connecting edge into the space left empty. The winner is the first player to get 3-in-a-row.\
 
 The image below shows which dots are connected to each other. \
-![Image]([http://pi.math.cornell.edu/~mec/2003-2004/graphtheory/tictactoe/achi1.jpg])
+![Image](http://pi.math.cornell.edu/~mec/2003-2004/graphtheory/tictactoe/achi1.jpg)
 
 
 
