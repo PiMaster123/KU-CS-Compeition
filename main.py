@@ -4,10 +4,12 @@ boardMatrix = [
 	[0, 0, 0],
 	[0, 0, 0]
 ]
+print("*                             *")
 
 
-
-print('A3 |  B3  | C3', '___|______|_____', 'A2 |  B2  | C2', '___|______|_____', 'A1 |  B1  | C1', '   |      |', '  ', sep='\n') # Draw notation for convenience
+print('A3 |  B3 *| C3', '___|______|_____        *', 'A2 |  B2  | C2                 *        *', '___|______|_____   *                               *', 'A1 |  B1 *| C1', '   |      |               *                               *', sep='\n') # Draw notation for convenience
+print("    *               *                                   *")
+print("*")
 win = 0 # Lets win message only happen once
 stage = 0 # Dictates when the game is in Tic-Tac-Toe stageof game or sliding stage of the game
 
@@ -99,7 +101,7 @@ while True:
 		
 		for i in range(3):
 			if abs(sum(boardMatrix[i])) == 3:
-				print("Player " + str(int(sum(boardMatrix[i])/3)) + " is the winner! Run program again to play again.")
+				print("Player " + str(int(sum(boardMatrix[i])/3)) + " is the winner! Run program again to play.")
 				win+=1
 				break
 			elif abs(sum([val[i] for val in boardMatrix])) == 3:
