@@ -14,7 +14,7 @@ We have made a variant a Tic-Tac-Toe called Achi using the Python console.
 The image below shows which dots are connected to each other.\
 ![Image](http://pi.math.cornell.edu/~mec/2003-2004/graphtheory/tictactoe/achi1.jpg)\
 
-For further strategy in this game and other varaints, check out http://pi.math.cornell.edu/~mec/2003-2004/graphtheory/tictactoe/howtoplayttt.html
+For further strategy in this game and other variants, check out http://pi.math.cornell.edu/~mec/2003-2004/graphtheory/tictactoe/howtoplayttt.html
 
 
 
