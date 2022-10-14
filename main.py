@@ -1,3 +1,5 @@
+from abc import ABC, abstractmethod
+
 # This is the board the game is played on
 boardMatrix = [
 	[0, 0, 0],
@@ -11,7 +13,7 @@ print('A3 |  B3 *| C3', '___|______|_____        *', 'A2 |  B2  | C2            
 print("    *               *                                   *")
 print("*")
 win = 0 # Lets win message only happen once
-stage = 0 # Dictates when the game is in Tic-Tac-Toe stage of game or sliding stage of the game
+stage = 0 # Dictates when the game is in Tic-Tac-Toe stageof game or sliding stage of the game
 
 player = 1 # Says whose turn it is
 
@@ -128,7 +130,7 @@ while True:
 			print('')
 			print('Now, we have entered the sliding stage.')
 			print('In this stage, you need to choose a node of yours that is connected to the 0 in the grid.')
-			print('The center is connected to every other node and the peripheral nodes are connected to their orthogonal neighbors.')
+			print('The center is conected to every other node and the peripheral nodes are connected to their orthogonal neighbors.')
 			print('If a valid node is not chosen, the turn will be skipped.')
 			print('')
 			printBoard()
@@ -357,6 +359,33 @@ while True:
 		player*=-1
 	
 
+class TicTacToeGames(ABC):
+	
+	def GeneralTTTInfo(self):
+		print("Tic-Tac-Toe style games are games usually played on a square with alternating turns and a goal of getting k-in a row for some k.")
+	
+	@abstractmethod
+	def Rules(self):
+		print("Make 3 in a three after alternating turns")
+
+class Achi(TicTacToeGames):
+	def Rules(self):
+		print("In Achi, there are two stages: the tic-tac-toe stage and the sliding stage. The tic-tac toe stages is just like regular tic-tac-toe. The sliding stage comes only after a drawed positions and involves sliding pieces around to the empty square to get three in a row.")
+	
+class UltimateTicTacToe(TicTacToeGames):
+	def Rules(self):
+		print("UltimateTicTacToe is essentially nested tic-tac-toes inside of a tic-tac-toe. This would have 3^4 = 81 square in the grid")
 
 
- 
+		
+
+
+
+print("")
+print("Here is some more info:")
+achi = Achi()
+ulti = UltimateTicTacToe()
+
+achi.GeneralTTTInfo()
+achi.Rules()
+ulti.Rules()
