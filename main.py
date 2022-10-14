@@ -11,7 +11,7 @@ print('A3 |  B3 *| C3', '___|______|_____        *', 'A2 |  B2  | C2            
 print("    *               *                                   *")
 print("*")
 win = 0 # Lets win message only happen once
-stage = 0 # Dictates when the game is in Tic-Tac-Toe stageof game or sliding stage of the game
+stage = 0 # Dictates when the game is in Tic-Tac-Toe stage of game or sliding stage of the game
 
 player = 1 # Says whose turn it is
 
