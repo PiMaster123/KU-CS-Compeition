@@ -240,7 +240,7 @@ while True:
 
 				elif boardMatrix[0][1] == 0:
 					boardMatrix[0][1] = player
-					boardMatrix[1][1] ==0
+					boardMatrix[1][1] = 0
 					printBoard()
 
 				elif boardMatrix[2][2] == 0:
